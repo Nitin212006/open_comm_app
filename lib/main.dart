@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'screens/landing_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(OpenCommApp());
 }
 
-class MyApp extends StatelessWidget {
+class OpenCommApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Open Communication',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Welcome to OpenComm', style: TextStyle(fontSize: 24)),
-        ),
-      ),
+
+      // App Theme (we'll improve later)
+      theme: ThemeData(primarySwatch: Colors.blue),
+
+      // Starting screen
+      home: LandingPage(),
     );
   }
 }
